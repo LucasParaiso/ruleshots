@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+:root {
+    --primary: #6c55ae;
+    --secondary: #2f2841;
+    --detail: #514869;
+    --background: #201b2c;
+    --shadow: #00000056;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+    background-color: var(--background);
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--primary);
+}
+
+h3 {
+    white-space: nowrap;
+}
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > img {
+    width: 35vw;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.m-button-Config {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.configDropdownItens {
+    background-color: var(--background);
+    width: 100%;
+    color: var(--white);
+    border-radius: 10px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.configMainDropdownItens {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    justify-content: left;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 0px;
+    box-shadow: 1px 10px 20px var(--shadow);
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.report {
+    margin-top: 100px;
+    width: 75%;
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    justify-content: left;
+    align-items: center;
+    padding: 30px 35px;
+    background-color: var(--secondary);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px var(--shadow);
+    max-width: 1000px;
+    min-width: 320px;
+    min-height: 320px;
+    max-height: 800px;
+}
+
+.firstBorderPurple {
+    border: 1px;
+    border-color: var(--primary);
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+.otherBorderPurple {
+    border: 1px;
+    border-color: var(--primary);
+    border-bottom-style: solid;
+}
+
+.configInputDiv {
+    background-color: var(--detail);
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+.formatedFirstText {
+    color: var(--white);
+    font-weight: bold;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.configFormatedText {
+    color: var(--white);
+    margin: 0px;
+    padding: 5px;
+}
+
+.formatedText {
+    color: var(--white);
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.configInputText {
+    border-style: none;
+    background-color: transparent;
+    height: 30px;
+    align-self: center;
+    outline: none;
+    color: var(--white);
+    width: 100%;
+}
+
+.marginTable {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+}
+
+.j-content-between {
+    justify-content: space-between;
+}
+
+.reportButton {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 12px;
+    place-self: center;
+    color: #2b134b;
+    /* width: 100%; */
+    font-weight: bold;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+a.reportButton {
+    text-decoration: none;
+    text-align: center;
+    color: #2b134b;
+}
+
+.reportButton:hover {
+    background-color: #fff;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+}
+
+@media only screen and (max-width: 768px) {
+    .reportButton {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        width: 100%;
+    }
+}
+
+.config {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    justify-content: left;
+    align-items: center;
+    padding: 30px 35px;
+    background-color: var(--secondary);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px var(--shadow);
+    max-width: 1000px;
+    min-width: 320px;
+}
+
+.stock {
+    margin-top: 100px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    justify-content: left;
+    align-items: center;
+    padding: 30px 35px;
+    background-color: var(--secondary);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px var(--shadow);
+    max-width: 1000px;
+    min-width: 320px;
+}
+
+.stock > h1 {
+    color: var(--primary);
+    font-weight: 800;
+    margin: 0;
+}
+
+.stock-img {
+    background-color: var(--detail);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 1px 10px 40px var(--shadow);
+}
+
+.buttonDivStock {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.marginForSidebar {
+    margin-left: 78px;
+}
+
+.eachButtonDivStock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: var(--background);
+    color: var(--white);
+    border-radius: 100%;
+    margin: 0px;
+    margin-top: 15px;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: var(--secondary);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px var(--shadow);
+}
+
+.card-login > h1 {
+    color: var(--primary);
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--detail);
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px var(--shadow);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background-color: var(--primary);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px var(--primary)52;
+    margin: 10px 0px 10px 0px;
+}
+
+.form-switch {
+    padding-left: 3em;
+}
+
+div.table {
+    overflow-x: scroll;
+}
+
+th,
+td {
+    min-width: 100px;
+}
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .resp table {
+        display: block;
+    }
+
+    .resp th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        display: block;
+    }
+
+    .resp tr {
+        border: 1px solid #ccc;
+        display: block;
+    }
+
+    .resp td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        width: 100%;
+        background-color: var(--white);
+        text-indent: 50%;
+        text-align: left;
+        padding-left: 0px;
+        display: block;
+    }
+
+    .resp td:nth-child(1) {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        font-size: 20px;
+        text-indent: 0%;
+        text-align: center;
+    }
+
+    .resp td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        text-indent: 0%;
+        text-align: left;
+        white-space: nowrap;
+        background-color: var(--white);
+        font-weight: bold;
+    }
+
+    .resp td:nth-of-type(2):before {
+        content: attr(data-th);
+    }
+
+    .resp td:nth-of-type(3):before {
+        content: attr(data-th);
+    }
+
+    .resp td:nth-of-type(4):before {
+        content: attr(data-th);
+    }
+
+    .resp td:nth-of-type(5):before {
+        content: attr(data-th);
+    }
+
+    .resp td:nth-of-type(6):before {
+        content: attr(data-th);
+    }
+
+    .resp td:nth-of-type(7):before {
+        content: attr(data-th);
+    }
+
+    .resp td:nth-of-type(8):before {
+        content: attr(data-th);
+    }
+
+    .resp td:nth-of-type(9):before {
+        content: attr(data-th);
+    }
+
+    .resp td:nth-of-type(10):before {
+        content: attr(data-th);
+    }
+}
+
+.modal:nth-of-type(even) {
+    z-index: 1062 !important;
+}
+
+.modal-backdrop.show:nth-of-type(even) {
+    z-index: 1061 !important;
+}
+
+.modalToAddDrink {
+    max-width: 200px;
+    width: auto;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login > img {
+        width: 65vw;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+}
