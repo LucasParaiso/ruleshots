@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('links', function (Blueprint $table) {
+        Schema::create('drinks', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->string('name');
-            $table->string('link');
-            $table->string('icon')->nullable();
-            $table->boolean('is_active')->default(0);
+            $table->integer('empty_bottle_weight');
+            $table->integer('shot_weight');
+            $table->integer('shot_remaining');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('links');
+        Schema::dropIfExists('drinks');
     }
 };

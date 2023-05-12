@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://lparaiso.com/lparaiso'),
+    'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL'),
 
@@ -121,7 +121,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY','lwaadtrdg4slz1am6ypwtkh1fiuu6qlw'),
+    'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
 
