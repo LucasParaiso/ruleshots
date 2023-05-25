@@ -19,14 +19,14 @@
             <span class="tooltip">Relatório</span>
         </li>
         <li>
-            <a href="{{ route('user.show', ['user' => session('id')]) }}">
+            <a href="">
                 <i class="bx bx-cog"></i>
                 <span class="links_name">Configurações</span>
             </a>
             <span class="tooltip">Configurações</span>
         </li>
         <li class="profile">
-            <form id="formLogout" action="{{ route('auth.logout') }}" method="POST">@csrf</form>
+            <form id="formLogout" action="{{ route('logout') }}" method="POST">@csrf</form>
             <a href="javascript:void(0)" onclick="document.getElementById('formLogout').submit()">
                 <i class="bx bx-log-out"></i>
                 <span class="links_name">Deslogar</span>
