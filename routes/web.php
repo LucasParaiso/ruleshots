@@ -4,6 +4,7 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\StockController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 
 //User Rote
 Route::resource('login', UserController::class)->only(['index']);
@@ -26,3 +27,19 @@ Route::middleware(['authenticate'])->group(function () {
     Route::get('/report/download', [ReportController::class, 'download'])->name('report.download');
     Route::resource('report', ReportController::class);
 });
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route::middleware('auth')->group(function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// });
+
+// require __DIR__.'/auth.php';
