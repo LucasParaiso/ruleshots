@@ -6,27 +6,22 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 
-Route::middleware(['auth'])->group(function () {
-    //Default Rote
+Route::middleware(['auth', 'verified'])->group(function () {
+    // Default
     Route::get('/', [StockController::class, 'index']);
 
-    //User Rote
+    // User
     Route::resource('user', UserController::class)->except(['index', 'create', 'store']);
 
-    //Stock Rote
+    // Stock
     Route::put('stock/shot/{stock}', [StockController::class, 'updateShotRemaining'])->name('stock.updateShot');
     Route::resource('stock', StockController::class);
 
-    //Report Rote
+    // Report
     Route::get('/report/download', [ReportController::class, 'download'])->name('report.download');
     Route::resource('report', ReportController::class);
-});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
+    // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
