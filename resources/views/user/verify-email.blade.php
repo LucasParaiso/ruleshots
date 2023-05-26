@@ -18,7 +18,7 @@
 <form method="POST" action="{{ route('logout') }}" id="formLogout">
     @csrf
 
-    <a href="javascript:void(0)" onclick="document.getElementById('formLogout').submit()">Log Out</a>
+    <a href="javascript:void(0)" onclick="document.getElementById('formLogout').submit()">Login</a>
 </form>
 
 
