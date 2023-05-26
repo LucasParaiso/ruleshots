@@ -1,6 +1,6 @@
 <div class="sidebar">
     <div class="logo-details">
-        <div class="user_name">{{ session('name') }}</div>
+        <div class="user_name">{{ Auth::user()->name }}</div>
         <i class="bx bx-menu" id="btn"></i>
     </div>
     <ul class="nav-list" style="padding-left: 0px">

@@ -17,7 +17,7 @@ class ReportController extends Controller
      */
     public function index()
     {
-        $drinks = DB::table('drinks')->where('user_id', session('id'))->get();
+        $drinks = DB::table('drinks')->where('user_id', Auth::user()->id)->get();
 
         return view('report/report', [
             'drinks' => $drinks,
@@ -92,7 +92,7 @@ class ReportController extends Controller
 
     public function download()
     {
-        $drinks = DB::table('drinks')->where('user_id', session('id'))->get();
+        $drinks = DB::table('drinks')->where('user_id', Auth::user()->id)->get();
 
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
@@ -127,7 +127,7 @@ class ReportController extends Controller
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         header('Content-Disposition: attachment;filename="Relatorio_Rule_Shots"' . date("d/m/Y") . '".xlsx"');
         header('Cache-Control: max-age=0');
-        
+
         $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
         $writer->save('php://output');
     }
