@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\resources",
+    "\\resources\\css",
+    "\\resources\\js",
+    "\\resources\\views",
+    "\\resources\\views\\config",
+    "\\resources\\views\\error",
+    "\\resources\\views\\stock",
+    "\\resources\\views\\template",
+    "\\resources\\views\\user"
+  ],
+  "SelectedNode": "\\resources\\views\\stock\\stock.blade.php",
+  "PreviewInSolutionExplorer": false
+}
