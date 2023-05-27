@@ -61,31 +61,31 @@
     }
 
     function setDarkModePreference(isDarkMode) {
-      localStorage.setItem('darkModePreference', isDarkMode);
+        localStorage.setItem('darkModePreference', isDarkMode);
     }
 
     function setDarkModePreference(isDarkMode) {
-      localStorage.setItem('darkModePreference', isDarkMode);
+        localStorage.setItem('darkModePreference', isDarkMode);
     }
 
     function darkwhitemode() {
-      const toggleButton = document.getElementById('toggle-button');
+        const toggleButton = document.getElementById('toggle-button');
 
-      const darkModePreference = localStorage.getItem('darkModePreference');
-      const isDarkMode = darkModePreference === 'true';
+        const darkModePreference = localStorage.getItem('darkModePreference');
+        const isDarkMode = darkModePreference === 'true';
 
-      document.documentElement.classList.toggle('dark-mode', isDarkMode);
+        document.documentElement.classList.toggle('dark-mode', isDarkMode);
 
-      toggleButton.addEventListener('click', function () {
-        const newIsDarkMode = !isDarkMode;
+        toggleButton.addEventListener('click', function () {
+          const newIsDarkMode = !isDarkMode;
 
-        document.documentElement.classList.toggle('dark-mode', newIsDarkMode);
-        setDarkModePreference(newIsDarkMode);
-      });
+          document.documentElement.classList.toggle('dark-mode', newIsDarkMode);
+          setDarkModePreference(newIsDarkMode);
+        });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-      darkwhitemode();
+        darkwhitemode();
     });
 
 </script>
