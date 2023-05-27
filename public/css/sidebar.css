@@ -15,15 +15,19 @@
     --shadow: #00000056;
     --white: #ffffff;
     --black: #000000;
+    --background-sidebar: #201b2c;
 }
 
     /* Modo Escuro */
     :root.dark-mode {
-        --background: white;
+        --primary: #201b2c;
+        --background: #eed6e5;
         --secondary: #514869;
         --color: #ffffff;
-        --white: #000000;
+        /*--white: #000000;*/
         --black: #ffffff;
+        --detail: #6c55ae;
+        --background-sidebar: #6c55ae;
     }
 
 .sidebar {
@@ -77,7 +81,7 @@
     text-align: right;
 }
 .sidebar i {
-    color: #6c55ae;
+    color: var(--primary);
     height: 60px;
     min-width: 50px;
     font-size: 28px;
@@ -136,22 +140,22 @@
     padding: 0 20px 0 50px;
     width: 100%;
 }
-.sidebar li a {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    border-radius: 12px;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0.4s ease;
-    background: #201b2c;
-}
+    .sidebar li a {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.4s ease;
+        background: var(--background-sidebar);
+    }
 .sidebar li a:hover {
     background: #140f1f;
 }
 .sidebar li form .links_name,
 .sidebar li a .links_name {
-    color: #6c55ae;
+    color: var(--primary);
     font-size: 15px;
     font-weight: 400;
     white-space: nowrap;

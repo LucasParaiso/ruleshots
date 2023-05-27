@@ -26,9 +26,9 @@
             <span class="tooltip">Configurações</span>
         </li>
         <li>
-            <a style="cursor: pointer">
+            <a style="cursor: pointer" onclick="darkwhitemode()">
                 <i class="bx bx-cog"></i>
-                <span class="links_name" id="toggle-button" onclick="darkwhitemode()" >Alternar Modo</span>
+                <span class="links_name" id="toggle-button" >Alternar Modo</span>
             </a>
             <span class="tooltip">Alternar Modo</span>
         </li>
