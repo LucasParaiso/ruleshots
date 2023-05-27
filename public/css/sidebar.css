@@ -255,7 +255,6 @@
         display: none;
     }
 }
-
 @media (max-width: 700px) {
     .sidebar {
         position: fixed;
@@ -272,35 +271,32 @@
         height:100%;
         padding: 10px;
     }
-
     .sidebar .logo-details #btn {
-    position: absolute;
-    top: 0;
-    right: -20px;
-    transform: translateX(-50%);
-    font-size: 22px;
-    font-size: 23px;
-    text-align: right;
-    cursor: pointer;
-    transition: all 0.5s ease;
+        position: absolute;
+        top: 0;
+        right: -20px;
+        transform: translateX(-50%);
+        font-size: 22px;
+        font-size: 23px;
+        text-align: right;
+        cursor: pointer;
+        transition: all 0.5s ease;
     }
-        .sidebar li{
-            display: none;
-        }
-
-        .sidebar.open li {
-            transition: all 0.5s ease;
-            display: block;
-            width: 100%;
-        }
-        .sidebar li.profile{
-            bottom: auto;
-            bottom: 30px;
-        }
-        .sidebar.open li.profile{
-            width: 100%;
-        }
-
+    .sidebar li{
+        display: none;
+    }
+    .sidebar.open li {
+        transition: all 0.5s ease;
+        display: block;
+        width: 100%;
+    }
+    .sidebar li.profile{
+        bottom: auto;
+        bottom: 30px;
+    }
+    .sidebar.open li.profile{
+        width: 100%;
+    }
     .marginForSidebar{
         margin-left:0px;
     }
