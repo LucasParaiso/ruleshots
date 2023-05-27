@@ -1,16 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\resources",
-    "\\resources\\css",
-    "\\resources\\js",
-    "\\resources\\views",
-    "\\resources\\views\\config",
-    "\\resources\\views\\error",
-    "\\resources\\views\\stock",
-    "\\resources\\views\\template",
-    "\\resources\\views\\user"
+    "\\app",
+    "\\app\\Providers",
+    "\\resources"
   ],
-  "SelectedNode": "\\resources\\views\\stock\\stock.blade.php",
+  "SelectedNode": "\\app\\Providers\\AppServiceProvider.php",
   "PreviewInSolutionExplorer": false
 }
