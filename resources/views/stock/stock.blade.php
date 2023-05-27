@@ -2,7 +2,7 @@
 
 <div class="stock">
     <div class="row row-cols-1 row-cols-md-4 justify-content-md-between">
-        <h3 class="col-1" style="color: white;">Meu estoque</h3>
+        <h3 class="col-1">Meu estoque</h3>
         <button class="col-1 reportButton" data-bs-toggle="modal" href="#myModal">ADICIONAR</button>
     </div>
 

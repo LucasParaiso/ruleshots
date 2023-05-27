@@ -18,6 +18,11 @@
         <div class="right-login">
             <div class="card-login">
                 <h1>REGISTRAR</h1>
+                @if (session('message'))
+                <div class="alert alert-{{ session('messageSucessDanger') }} text-center mt-3" role="alert">
+                    {{ session('message') }}
+                </div>
+                @endif
                 <form method="POST" action="{{ route('register.store') }}">
                     @csrf
                     <div class="textfield">
