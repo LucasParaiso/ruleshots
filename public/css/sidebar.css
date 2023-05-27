@@ -6,13 +6,33 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+:root {
+    --primary: #6c55ae;
+    --secondary: #2f2841;
+    --detail: #514869;
+    --background: #201b2c;
+    --shadow: #00000056;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+    /* Modo Escuro */
+    :root.dark-mode {
+        --background: white;
+        --secondary: #514869;
+        --color: #ffffff;
+        --white: #000000;
+        --black: #ffffff;
+    }
+
 .sidebar {
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
     width: 78px;
-    background: #2f2841;
+    background: var(--secondary);
     padding: 6px 14px;
     z-index: 99;
     transition: all 0.5s ease;
