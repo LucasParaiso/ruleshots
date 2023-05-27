@@ -11,12 +11,10 @@
     --btn: #2b134b;
 }
 
-/* Modo Escuro */
     :root.dark-mode {
         --background: #eed6e5;
         --secondary: #514869;
         --color: #ffffff;
-        /*--white: #000000;*/
         --black: #ffffff;
         --btn: #514869;
     }

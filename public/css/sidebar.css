@@ -18,13 +18,11 @@
     --background-sidebar: #201b2c;
 }
 
-    /* Modo Escuro */
     :root.dark-mode {
         --primary: #201b2c;
         --background: #eed6e5;
         --secondary: #514869;
         --color: #ffffff;
-        /*--white: #000000;*/
         --black: #ffffff;
         --detail: #6c55ae;
         --background-sidebar: #6c55ae;
