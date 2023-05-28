@@ -25,6 +25,13 @@
             </a>
             <span class="tooltip">Configurações</span>
         </li>
+        <li>
+            <a style="cursor: pointer" onclick="darkwhitemode()">
+                <i class="bx bx-cog"></i>
+                <span class="links_name" id="toggle-button" >Alternar Modo</span>
+            </a>
+            <span class="tooltip">Alternar Modo</span>
+        </li>
         <li class="profile">
             <form id="formLogout" action="{{ route('logout') }}" method="POST">@csrf</form>
             <a href="javascript:void(0)" onclick="document.getElementById('formLogout').submit()">
@@ -52,4 +59,32 @@
             closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
         }
     }
+
+    function setDarkModePreference(isDarkMode) {
+        localStorage.setItem('darkModePreference', isDarkMode);
+    }
+
+    function setDarkModePreference(isDarkMode) {
+        localStorage.setItem('darkModePreference', isDarkMode);
+    }
+
+    function darkwhitemode() {
+        const toggleButton = document.getElementById('toggle-button');
+
+        const darkModePreference = localStorage.getItem('darkModePreference');
+        const isDarkMode = darkModePreference === 'true';
+
+        document.documentElement.classList.toggle('dark-mode', isDarkMode);
+
+        toggleButton.addEventListener('click', function () {
+          const newIsDarkMode = !isDarkMode;
+
+          document.documentElement.classList.toggle('dark-mode', newIsDarkMode);
+          setDarkModePreference(newIsDarkMode);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        darkwhitemode();
+    });
 </script>
