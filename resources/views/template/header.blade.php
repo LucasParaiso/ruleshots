@@ -19,10 +19,11 @@
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
 
     <!-- Title -->
-    <title>TITULO</title>
+    <title>Rule Shots</title>
 </head>
 
 <body>
     @include('template/sidebar')
-    
+
+   
     <div class="marginForSidebar">

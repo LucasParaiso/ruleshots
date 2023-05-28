@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class StockController extends Controller
 {
@@ -14,7 +15,7 @@ class StockController extends Controller
      */
     public function index()
     {
-        $drinks = DB::table('drinks')->where('user_id', session('id'))->get();
+        $drinks = DB::table('drinks')->where('user_id', Auth::user()->id)->get();
 
         return view('stock/stock', [
             'drinks' => $drinks,
@@ -46,7 +47,7 @@ class StockController extends Controller
 
         $insert = DB::table('drinks')->insert([
             'name' => $request->name,
-            'user_id' => session('id'),
+            'user_id' => Auth::user()->id,
             'empty_bottle_weight' => $request->empty_bottle_weight,
             'shot_weight' => $shot_weight,
             'shot_remaining' => $shot_remaining,

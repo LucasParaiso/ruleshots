@@ -47,7 +47,7 @@ class UserController extends Controller
             $message = 'Usuário cadastrado com sucesso!';
         } else {
             $message = 'Usuário não cadastrado!';
-        } 
+        }
 
         return redirect('login')->with([
             'message' => $message,
@@ -75,7 +75,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-    //
+        //
     }
 
     /**
@@ -117,7 +117,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-    //
+        //
     }
 
     /**
@@ -132,15 +132,15 @@ class UserController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ], [
-            'email.required' => 'E-mail é obrigatório',
-            'password.required' => 'Senha é obrigatória',
-        ]);
+                'email.required' => 'E-mail é obrigatório',
+                'password.required' => 'Senha é obrigatória',
+            ]);
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
             $user = DB::table('users')->where('id', Auth::id())->get();
-            
+
             session(['id' => Auth::id()]);
             session(['name' => $user[0]->name]);
 

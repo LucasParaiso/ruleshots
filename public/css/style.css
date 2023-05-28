@@ -29,7 +29,7 @@ body * {
     box-sizing: border-box;
 }
 
-a {
+a, p {
     color: var(--primary);
 }
 
