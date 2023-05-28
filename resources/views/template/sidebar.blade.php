@@ -1,9 +1,12 @@
 <div class="sidebar">
+    {{-- Logo Details --}}
     <div class="logo-details">
         <div class="user_name">{{ Auth::user()->name }}</div>
         <i class="bx bx-menu" id="btn"></i>
     </div>
+
     <ul class="nav-list" style="padding-left: 0px">
+        {{-- Estoque --}}
         <li>
             <a href="{{ route('stock.index') }}">
                 <i class="bx bx-folder"></i>
@@ -11,6 +14,8 @@
             </a>
             <span class="tooltip">Estoque</span>
         </li>
+
+        {{-- Relatorio --}}
         <li>
             <a href="{{ route('report.index') }}">
                 <i class="bx bx-pie-chart-alt-2"></i>
@@ -18,13 +23,17 @@
             </a>
             <span class="tooltip">Relatório</span>
         </li>
+
+        {{-- Configuracoes --}}
         <li>
-            <a href="">
+            <a href="{{ route('config.index') }}">
                 <i class="bx bx-cog"></i>
                 <span class="links_name">Configurações</span>
             </a>
             <span class="tooltip">Configurações</span>
         </li>
+
+        {{-- Dark Mode --}}
         <li>
             <a style="cursor: pointer" onclick="darkwhitemode()">
                 <i class="bx bx-cog"></i>
@@ -32,6 +41,8 @@
             </a>
             <span class="tooltip">Alternar Modo</span>
         </li>
+
+        {{-- Profile --}}
         <li class="profile">
             <form id="formLogout" action="{{ route('logout') }}" method="POST">@csrf</form>
             <a href="javascript:void(0)" onclick="document.getElementById('formLogout').submit()">
@@ -58,10 +69,6 @@
         } else {
             closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
         }
-    }
-
-    function setDarkModePreference(isDarkMode) {
-        localStorage.setItem('darkModePreference', isDarkMode);
     }
 
     function setDarkModePreference(isDarkMode) {

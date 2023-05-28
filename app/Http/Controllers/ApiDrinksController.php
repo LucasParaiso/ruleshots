@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Drink;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class ApiDrinksController extends Controller

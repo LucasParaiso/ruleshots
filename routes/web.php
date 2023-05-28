@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\StockController;
+use App\Http\Controllers\ConfigController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
@@ -20,6 +21,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Report
     Route::get('/report/download', [ReportController::class, 'download'])->name('report.download');
     Route::resource('report', ReportController::class);
+
+    // Config
+    Route::resource('config', ConfigController::class);
 
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

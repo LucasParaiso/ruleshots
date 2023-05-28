@@ -40,18 +40,6 @@
                         <input type="tel" name="phone" placeholder="Telefone" value="{{ $user->phone }}">
                     </div>
                 </div>
-
-                <div class="col">
-                    <div class="textfield">
-                        <input type="text" name="social_media_1" placeholder="Rede Social 1" value="{{ $user->social_media_1 }}">
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="textfield">
-                        <input type="text" name="social_media_2" placeholder="Rede Social 2" value="{{ $user->social_media_2 }}">
-                    </div>
-                </div>
             </form>
         </div>
     </div>
