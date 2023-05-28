@@ -12,5 +12,5 @@ Requisito de segurança
  ✅ Validação da autenticação pelo email
  
 Tarefas
- ❌ API
+ ✅ API
  ❌ ModelIO
