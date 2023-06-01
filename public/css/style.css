@@ -200,7 +200,7 @@ a.reportButton {
 }
 
 .reportButton:hover {
-    background-color: #fff;
+    background-color: var(--icon-hover);
     opacity: 1;
     pointer-events: auto;
     transition: all 0.4s ease;
